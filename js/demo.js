@@ -1,0 +1,1 @@
+<a href="javascript:if(confirm('請確認以下請假資訊')){window.location.href=' #?news_id='};">刪除</a>

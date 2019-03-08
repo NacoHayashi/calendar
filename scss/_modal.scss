@@ -1,0 +1,21 @@
+.ad_marginTop{
+    top:0;
+    @include desktop{
+        top:7%!important;
+    }
+    .ad_dialogWidth{
+        max-width: 600px;
+       .ad_modalCard{
+            background: #dcdaf0;
+            border: 2px double #b8b4e0;
+            color:#181535;
+            .ad_modalHeader{
+                
+            }
+            .ad_modalBody{
+
+            }
+        } 
+    }
+    
+}

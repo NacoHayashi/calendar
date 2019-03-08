@@ -1,0 +1,93 @@
+//flex
+@mixin flexRow($x,$y) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+@mixin  flexColumn ($x,$y) {
+    display: flex;
+    flex-direction: column;
+    align-items: $x;
+    justify-content:$y;
+}
+//position
+@mixin fixedFull {
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+//size
+@mixin size($width, $height,$maxW) {
+    width: $width;
+    height: $height;
+    max-width: $maxW;
+  }
+//text replace
+@mixin hide-text{
+    text-indent:110%;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+//img   
+@mixin bgImg {
+    background-position:top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+//RWD
+@mixin xxsMobile{
+    @media (max-width:288px) {
+        @content
+    }
+};
+@mixin xsMobile{
+    @media (min-width:350px) {
+        @content
+    }
+};
+@mixin sMobile{
+    @media (min-width:410px) {
+        @content
+    }
+};
+@mixin mMobile{
+    @media (min-width:568px) {
+        @content
+    }
+};
+@mixin lMobile{
+    @media (min-width:600px) {
+        @content
+    }
+};
+@mixin lMobile_2{
+    @media (min-width:650px) {
+        @content
+    }
+};
+@mixin tablet{
+    @media (min-width:700px) {
+        @content
+    }
+};
+@mixin lTablet{
+    @media (min-width:850px) {
+        @content
+    }
+};
+@mixin desktop{
+    @media (min-width:1024px) {
+        @content
+    }
+};
+@mixin lDesktop{
+    @media (min-width:1200px) {
+        @content
+    }
+};

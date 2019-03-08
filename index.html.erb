@@ -1,0 +1,112 @@
+        <div class="jumbotron p-3 ">
+            <h5 class="display-6 d-flex justify-content-between"><div>Vacation state</div><button class="btn btn-outline-info-"><i class="fas fa-angle-up"></i></button></h5>
+            <hr class="my-4">
+            <div class="d-md-flex justify-content-around ad_toggle">
+                <div class="card col-12 col-md-3 px-2">
+                        <div class="card-body p-2">
+                        <h5 class="card-title font-weight-bold">個人資訊</h5>
+                        <p class="card-text mb-1">到職日:<span class="text-info mx-2">2019-01-21</span></p>
+                        <p class="card-text mb-1">年資:<span class="text-info mx-2">0</span>年</p>
+                        <p class="card-text mb-1">本年度特休:<span class="text-info mx-2">14.5</span>天</p>
+                        </div>
+                </div>            
+                <div class="card col-12 col-md-3 px-2">
+                        <div class="card-body p-2">
+                        <h5 class="card-title font-weight-bold">已請假天數</h5>
+                        <p class="card-text mb-1">特休:<span class="text-info mx-2">0</span>天</p>
+                        <p class="card-text mb-1">病假:<span class="text-info mx-2">0</span>天</p>
+                        <p class="card-text mb-1">事假:<span class="text-info mx-2">0</span>天</p>
+                        </div>
+                </div>            
+                <div class="card col-12 col-md-3 px-2">
+                        <div class="card-body p-2">
+                        <h5 class="card-title font-weight-bold">尚有特休<span class="text-danger mx-2">14.5</span>天</h5>
+                        <p class="card-tex mb-1">前年度:<span class="text-info mx-2">0</span>天</p>
+                        <p class="card-text mb-1">今年度:<span class="text-info mx-2">14.5</span>天</p>
+                        <p class="card-text text-danger f"><small>* 前年特休將於3/31失效</small></p>
+                        </div>
+                </div> 
+            </div>           
+        </div>             
+
+    <!--Vacation state end-->
+
+    <div class="container mt-2 mb-2">
+            <div id='calendar'></div>
+    </div>
+    <!--calendar end-->
+
+    <div id="modalone" class="modal ad_marginTop" tabindex="-1" role="dialog" >
+      <div class="modal-dialog ad_dialogWidth" role="document">
+        <div class="modal-content ad_modalCard">
+          <div class="modal-header ad_modalHeader">
+            <h5 class="modal-title">休假申請</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body ad_modalBody">
+              <form id="apply_form" class="form-horizontal" action="" method="POST" role="form"  >
+                <div class="d-sm-flex justify-content-between">
+                  <div class="form-group col-sm-6 pl-0">
+                    <label for="applyStartDate">開始日期:</label>
+                    <input type="date" id="applyStartDate" class="form-control" name="applyStartDate" required="required"  >
+                  </div>
+                  <div class="form-group col-sm-6 pl-0">
+                    <label for="applyEndDate">結束日期:</label>
+                    <input type="date" id="applyEndDate" class="form-control" name="applyEndDate" required="required"  >
+                  </div>
+                </div>
+                <div class="d-sm-flex justify-content-between">
+                  <div class="form-group col-sm-6 pl-0">
+                    <label for="dayType">區間:</label>
+                    <select id="dayType" class="form-control"  required="required">
+                      <option value selected="selected" disabled="true" style="display:none">請選擇區間</option>
+                      <option value="all">全天</option>
+                      <option value="morning">半天-早上</option>
+                      <option value="evening">半天-下午</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-sm-6 pl-0">
+                    <label for="vacationType">假別:</label>
+                    <select id="vacationType" class="form-control" required="required">
+                      <option value selected="selected" disabled="true" style="display:none">請選擇假別</option>
+                      <option value="1">特休</option>
+                      <option value="2">病假</option>
+                      <option value="3">事假</option>
+                      <option value="4">婚假</option>
+                      <option value="5">喪假</option>
+                      <option value="6">產假</option>
+                      <option value="7">公假</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="reason">事由(選填) :</label>
+                  <textarea id="reason" class="form-control"  rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="workman">職務代理人:</label>
+                  <select id="workman" class="form-control" required="required" >
+                    <option value selected="selected" disabled="true" style="display:none">請選擇代理人</option>
+                    <optgroup label="Tech">
+                      <option value="Eric">Eric</option>
+                      <option value="Rex">Rex</option>
+                      <option value="Leo">Leo</option>
+                      <option value="Scott">Scott</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="other">交代事項(選填) :</label>
+                  <textarea id="other" class="form-control"  rows="3"></textarea>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <button type="button" class="btn btn-secondary mr-2" data-dismiss="modal">取消</button>
+                  <button type="submit" class="btn btn-primary">申請</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
