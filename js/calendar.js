@@ -1,7 +1,9 @@
+;'use strict';
 $(function() {
 
   $('#calendar').fullCalendar({
     //basic setting
+    locale :  "zh-tw",
     selectable: true,
     allDaySlot: true,
     eventLimit: true,
@@ -19,13 +21,10 @@ $(function() {
       }
     },
     buttonText:{
+        month:'Month',
+        week:'Week',
+        today:'Today',
         list:'Week list'
-    },
-    buttonIcons: {
-        prev: 'left-single-arrow',
-        next: 'right-single-arrow',
-        prevYear: 'left-double-arrow',
-        nextYear: 'right-double-arrow'
     },
     select: function(startDate, endDate) {
       start = startDate.format()
@@ -40,6 +39,12 @@ $(function() {
       right: 'prev,next today applyButton'
     },
     events: [{
+      title: '病假-早上\nNaco代理',
+      start: '2019-03-12T09:30:00',
+      end:'2019-03-12T12:00:00',
+      backgroundColor:"#119688",
+      textColor:'#fff',
+    },{
       title: '事假-早上\nNaco代理',
       start: '2019-03-04T09:30:00',
       end:'2019-03-04T12:00:00',
@@ -47,7 +52,7 @@ $(function() {
     }, {
       title: '特休-7天\nNaco代理',
       start: moment().add(7, 'days').format('YYYY-MM-DD'),
-      end: moment().add(14, 'days').format('YYYY-MM-DD'),
+      end: moment().add(14, 'days').format('YYYY-MM-DD'), 
       backgroundColor:"#000",
       textColor:'#fff'
     },{
@@ -69,7 +74,6 @@ $(function() {
        $('.fc-today').css('background','#efdcf3');
        $('.fc-applyButton-button').addClass('ad_applyBtn');
        $('.fc-today-button').addClass('ad_todayBtn');
-
     }
  
   adGeekTheme();
